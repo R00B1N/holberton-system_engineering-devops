@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# a Bash script that installs nginx on our web-01 server
+apt-get -y update
+apt-get -y install nginx
+chown -R "$USER":"$USER" /var/www/html
+echo "Holberton School" > /var/www/html/index.nginx-debian.html
+ufw allow 'Nginx HTTP'
+service nginx start
