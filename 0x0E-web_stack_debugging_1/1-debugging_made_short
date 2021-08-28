@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# commands to debug the container
+sudo sed -i 's/8080/80/' /etc/nginx/sites-enabled/default
+sudo service nginx start
+rm /var/run/nginx.pid
